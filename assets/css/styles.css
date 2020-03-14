@@ -18,6 +18,12 @@ nav {
     align-items: center;
 }
 
+body > section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 nav > div > a {
     color: #fff;
     text-decoration: none;
