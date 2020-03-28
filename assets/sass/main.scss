@@ -1,30 +1,22 @@
+$navBckg: #24272a;
+$sm: 600px;
+$md: 900px;
+$lg: 1024px;
+
+@import "navbar";
+@mixin centeringText() {
+  text-align: center;
+}
+
 html {
   height: 100%;
+  @include centeringText();
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   height: 100%;
   background-image: url(../images/beach.jpg);
-}
-
-nav{
-  background-color: #24272a;
-  height: 50px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav>div>a {
-  color: #ffffff;
-  text-decoration: none;
-  padding-right: 20px;
-}
-
-nav>div>a:hover {
-  color: turquoise;
 }
 
 #bedu-logo {
@@ -56,14 +48,15 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #24272a;
+  background-color: $navBckg;
   color: whitesmoke;
   height: 50px;
   width: 100%;
 }
 
 input::placeholder {
-  text-align: center;
+  // text-align: center; NO LONGER NECESSARY DUE TO THE FOLLOWING LINE
+  @include centeringText();
   color: purple;
 }
 
@@ -90,7 +83,7 @@ h3 {
 
 .signin {
   display: inline-flex;
-  background-color: #24272a;
+  background-color: $navBckg;
   border-radius: 4px;
   border: 1px;
   color: #ffffff;
@@ -135,11 +128,22 @@ h3 {
   align-items: center;
 }
 
-@media only screen and (max-width: 600px) {
-  section {
-    background-image: url('https://www.xtrafondos.com/wallpapers/resized/atardecer-rosa-en-la-playa-3341.jpg?s=large');
+@media only screen and (max-width: $sm) {
+  .row {
+    flex-direction: column;
   }
-  input {
-    display: none;
-  }
+}  
+
+// @media only screen and (max-width: $md) {
+//   section {
+//     background-image: url('https://www.xtrafondos.com/wallpapers/resized/atardecer-rosa-en-la-playa-3341.jpg?s=large');
+//   }
+//   input {
+//     display: none;
+//   }
+
+@media only screen and (max-width: $lg) {
+ .container-title-subtitle > p:first-child {
+   color: white;
+ }
 }

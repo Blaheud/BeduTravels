@@ -1,0 +1,52 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-image: url("https://concepto.de/wp-content/uploads/2018/08/selva-vegetacion-1-e1535405957152.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.jumbotron {
+  background-color: transparent;
+  color: white;
+}
+
+.iconos {
+  text-align: center;
+  background-color: white;
+  padding: 20px 0;
+}
+
+.iconos img {
+  width: 50px;
+  display: inline-block;
+}
+
+.btn-green {
+  background-color: green;
+  color: #24272a;
+  width: 100%;
+}
+.btn-green:hover {
+  background-color: #00e600;
+}
+
+.btn-red {
+  background-color: red;
+  color: #24272a;
+  width: 100%;
+}
+.btn-red:hover {
+  background-color: #ff6666;
+}
+
+.logo svg {
+  width: 100px;
+  fill: whitesmoke;
+}
+
+/*# sourceMappingURL=login.css.map */
